@@ -16,7 +16,8 @@
         for q in qubits { H(q); }
 
         // Step 2: Apply Grover’s Search Algorithm
-        let iterations = 30;  // Roughly sqrt(2^16) for optimal search
+        let iterations = 30;  // Using 30 iterations for simulation on classical hardware; 
+                              // optimally, this would be around 201 for N = 65,536
         for _ in 1..iterations {
             Oracle(qubits);  // Apply Oracle (marks the solution)
             
